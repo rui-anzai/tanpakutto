@@ -1,0 +1,35 @@
+h1{
+    line-height: 450%;
+    font-size: 200%;
+    color: white;
+    background-color: navy;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+  }
+  
+  .reol{
+   display: inline-block;
+   display:flex;
+  }
+  table {
+     
+      width: 290px;
+  }
+  table th {
+      white-space: nowrap;
+      width: 100px;
+  }
+  select{
+  font-size: 160%;
+      width: 290px;
+      height: 70px;
+  }
+  .aaaa{
+      display: flex;
+      flex-direction: row;
+      height: 400px;
+  }
+  
+  
