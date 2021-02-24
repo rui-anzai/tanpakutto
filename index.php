@@ -40,7 +40,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 
     </head>
     <body>
-      <h1>タンパクっと</h1>
       <div class="aaaa">
       <div class="reol">
         
