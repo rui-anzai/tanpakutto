@@ -1,5 +1,7 @@
 
+
 <?php
+
   include 'conn.php';
   include 'insert.php';
 ?>
@@ -16,10 +18,11 @@
     </head>
     <body>
       <h1>タンパクっと</h1>
+
       <br></br>
       <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
 
-      <div class="aaaa">
+
 
 
 
