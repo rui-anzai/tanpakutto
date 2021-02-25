@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <title>タンパクっと</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.0/chartjs-plugin-annotation.min.js" integrity="sha512-5kjW6zgAaEaZU8YhS7cQHv5DMkcBrEUk0XdPOZELlCwX/nrk2kwXHR6N0ybiFyoyT6hRkp8IUSDLlKeNCTw4Ww==" crossorigin="anonymous"></script> 
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.0/chartjs-plugin-annotation.min.js" integrity="sha512-5kjW6zgAaEaZU8YhS7cQHv5DMkcBrEUk0XdPOZELlCwX/nrk2kwXHR6N0ybiFyoyT6hRkp8IUSDLlKeNCTw4Ww==" crossorigin="anonymous"></script> -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.0/chartjs-plugin-annotation.js" integrity="sha512-y62+3mlxC/svFJJ0ONzcaVD0g3B7/35jdhSiR/9zuHpm/ebA2sEJc4txJjN4f88mpPS/x4ZV5CutMb70OJA3DQ==" crossorigin="anonymous"></script> -->
 
       <h1>タンパクっと</h1>
@@ -134,8 +134,8 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
                 id: 'a-line-1', // 線のid名を指定（他の線と区別するため）
                 mode: 'horizontal', // 水平を指定
                 scaleID: 'y軸', // 基準とする軸のid名
-                value: 15.6, // 引きたい線の数値（始点）
-                endValue: 15.6, // 引きたい線の数値（終点）
+                value: 65.0, // 引きたい線の数値（始点）
+                endValue: 65.0, // 引きたい線の数値（終点）
                 borderColor: 'red', // 線の色
                 borderWidth: 3, // 線の幅（太さ）
                 borderDash: [2, 2],
@@ -161,12 +161,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         ]
     }
         }
-
-
-    
-
-
-
   });      
       </script>
       <!--index.phpにpost-->
