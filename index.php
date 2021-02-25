@@ -188,13 +188,14 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
             }
         ]
     }
+        }
 
 
     
 
 
 
-      });      
+  });      
       </script>
       <!--index.phpにpost-->
       <form action="index.php" method="post">
