@@ -50,8 +50,97 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           <tbody>
           <tr><th>       
           <option value="who"></option>
+<<<<<<< HEAD
     <?php
      
+=======
+        <table border="1">
+          <tr><th>食品</th><th>タンパク質</th><th>選択数</th></tr>
+      <?php
+      //配列$products          
+      foreach($products as $p){
+      $id = $p['id'];
+      $name = $p['food_name'];
+      $protein = $p['protein'];
+      $order = $p['order_quantity'];
+      //表を生成して選択に合わせてidを送信  
+      echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グラム</td><td>{$order}個</td></tr>";  
+      }
+     ?>
+     <!--円グラフのclassを定義
+     <div class="chart-wrap" style="position: relative; display: inline-block;　display:flex; width: 950px; height: 700px;">
+     <canvas id="myPieChart"></canvas>
+     </div>
+     <br></br>-->
+
+	</body>
+</html>
+<?php
+	try
+	{
+   //food_productsデーブル内のproteinとorder..の合計を計算
+	 $stmt2 = $db->query("SELECT *, SUM(protein * order_quantity) FROM food_products");
+	 $food_product = $stmt2->fetch(PDO::FETCH_ASSOC);
+   //変数$goukeiに$stmt2の計算結果を格納
+	 $goukei = $food_product['SUM(protein * order_quantity)'];
+
+	 $db = null;
+	}
+	catch(PDOException $e)
+	{
+	echo $e->getMessage();
+	exit;
+	}
+
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+      <?php
+      try
+      {
+      // db接続
+      $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
+      $db->exec("INSERT INTO `chart`(`total`, `date_time`) VALUES ($goukei,NOW())"); //chartテーブルに$goukeiと現在の時間をinsert
+    	$db = null;
+    	}
+    	catch(PDOException $e)
+    	{
+    	echo $e->getMessage();
+    	exit;
+      }
+      ?>
+      <?php
+      $total_products = array();
+      try
+      {
+         // mysql接続
+         $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
+         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    
+         // 食品一覧を取得
+         $stmt3 = $db->query("SELECT * FROM `chart` WHERE 1");
+         $total_products = $stmt3->fetchAll(PDO::FETCH_ASSOC);
+        
+         //接続を切る
+         //$db = null;
+      }
+      catch(PDOException $e)
+      {
+       echo $e->getMessage();
+       exit;
+       $db = null;//接続を切る
+      }
+      ?>
+      <?php
+>>>>>>> b126001e90e65ea75f287e34d52db2c05b1c59b6
       //配列$products          
       foreach($total_products as $p){
       //
