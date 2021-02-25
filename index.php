@@ -52,7 +52,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}ã‚°ãƒ
       foreach($total_products as $p){
 
       $total = $p['total'];
-      //
       $sum = $sum . '"'. $p['sum'].'",';
       $time = $time . '"'. $p['time'] .'",';   
       }  
