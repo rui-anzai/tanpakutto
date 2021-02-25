@@ -50,8 +50,8 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       <?php
       //配列$products          
       foreach($total_products as $p){
+        
 
-      $total = $p['total'];
       $sum = $sum . '"'. $p['sum'].'",';
       $time = $time . '"'. $p['time'] .'",';   
       }  
@@ -61,7 +61,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       } else if(isset($_POST['update'])) {
           	try
           	{
-              
           	// db接続
           	$db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
           	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
@@ -78,7 +77,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           echo "";
       }
       ?>
-	   <h2><?php echo $total; ?>グラム摂取しました</h2>
+	   <h2><?php echo $goukei; ?>グラム摂取しました</h2>
          <!--棒グラフの表示-->
      <h2>直近一週間</h2>    
       <div class="chart-container" style="position: relative; width: 950px; height: 700px;">
