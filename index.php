@@ -85,7 +85,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
      //.getContext('2d');はcanvasでグラフとか描画するために使う 
      var cty = document.getElementById("myLineChart").getContext('2d');
       var myLineChart = new Chart(cty, {
-        type: '',
+        type: 'bar',
         data: {
              labels: [<?php echo $time ?>],//各棒の名前（name)
           datasets: [
