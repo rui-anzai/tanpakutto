@@ -118,12 +118,15 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           ],
         },
         options: {
-          
-          title: {
-            display: true,
-           
+      scales: {
+        xAxes: [{
+          ticks: {
+            autoSkip: true,
+            maxTicksLimit: 20 //値の最大表示数
           }
-        }
+        }]
+      }
+    }
       });      
       </script>
       <!--index.phpにpost-->
