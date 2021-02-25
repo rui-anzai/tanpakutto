@@ -76,7 +76,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           echo "";
       }
       ?>
-	   <h2><?php echo $goukei; ?>グラム摂取しました</h2>
+     <h2><?php echo (int)$goukei; ?>グラム摂取しました</h2>
          <!--棒グラフの表示-->
      <h2>直近一週間</h2>    
       <div class="chart-container" style="position: relative; width: 950px; height: 700px;">
