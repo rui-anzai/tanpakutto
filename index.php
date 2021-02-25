@@ -1,4 +1,4 @@
-
+<?php_
   include 'conn.php';
   include 'insert.php';
 ?>
@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="example.css">
         <meta charset="utf-8">
         <title>タンパクっと</title>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js'></script>
         <script src="app.js" defer></script>
@@ -15,6 +16,9 @@
     <body>
       <h1>タンパクっと</h1>
       <div class="aaaa">
+
+
+
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
@@ -38,6 +42,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 <!--ここまで-->
 </div>
 </div>
+
 <!-- 円グラフのclassを定義 -->
 <div class="chart-wrap" style="position: relative; display: inline-block;　display:flex; width: 800px; height: 700px;">
      <canvas id="myPieChart"></canvas>
@@ -48,6 +53,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           <tr><th>       
           <option value="who"></option>
       <?php
+
       foreach($total_products as $p){
 
       $sum = $sum . '"'. $p['sum'].'",';
@@ -115,6 +121,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           ],
         },
         options: {
+
       scales: {
         xAxes: [{
           id : 'x軸',
@@ -163,6 +170,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
     }
         }
   });      
+
       </script>
       <!--index.phpにpost-->
       <form action="index.php" method="post">
