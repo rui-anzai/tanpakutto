@@ -65,7 +65,6 @@
 	</body>
 </html>
 <?php
-  
 	try
 	{
    //food_productsデーブル内のproteinとorder..の合計を計算
