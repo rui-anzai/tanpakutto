@@ -47,20 +47,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           <tbody>
           <tr><th>       
           <option value="who"></option>
-
-        <table border="1">
-          <tr><th>食品</th><th>タンパク質</th><th>選択数</th></tr>
       <?php
-      //配列$products          
-      foreach($products as $p){
-      $id = $p['id'];
-      $name = $p['food_name'];
-      $protein = $p['protein'];
-      $order = $p['order_quantity'];
-      //表を生成して選択に合わせてidを送信  
-      echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グラム</td><td>{$order}個</td></tr>";  
-      }
-
       //配列$products          
       foreach($total_products as $p){
       //
