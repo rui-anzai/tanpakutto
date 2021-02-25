@@ -61,6 +61,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       } else if(isset($_POST['update'])) {
           	try
           	{
+              
           	// db接続
           	$db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
           	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
