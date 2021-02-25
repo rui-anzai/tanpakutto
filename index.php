@@ -8,10 +8,8 @@
         <link rel="stylesheet" type="text/css" href="example.css">
         <meta charset="utf-8">
         <title>タンパクっと</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.0/chartjs-plugin-annotation.min.js" integrity="sha512-5kjW6zgAaEaZU8YhS7cQHv5DMkcBrEUk0XdPOZELlCwX/nrk2kwXHR6N0ybiFyoyT6hRkp8IUSDLlKeNCTw4Ww==" crossorigin="anonymous"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.0/chartjs-plugin-annotation.js" integrity="sha512-y62+3mlxC/svFJJ0ONzcaVD0g3B7/35jdhSiR/9zuHpm/ebA2sEJc4txJjN4f88mpPS/x4ZV5CutMb70OJA3DQ==" crossorigin="anonymous"></script> -->
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js'></script>
       <h1>タンパクっと</h1>
 <div class="hidden_box">
 <label for="label1">選択してください</label>
