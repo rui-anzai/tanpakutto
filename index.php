@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <title>タンパクっと</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.0/chartjs-plugin-annotation.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.0/chartjs-plugin-annotation.min.js" integrity="sha512-5kjW6zgAaEaZU8YhS7cQHv5DMkcBrEUk0XdPOZELlCwX/nrk2kwXHR6N0ybiFyoyT6hRkp8IUSDLlKeNCTw4Ww==" crossorigin="anonymous"></script>
 
 
       <h1>タンパクっと</h1>
