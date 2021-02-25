@@ -23,6 +23,7 @@
 <table border="2">
 <tr><th>食品</th><th>タンパク質</th><th>選択数</th></tr>
 <?php
+
 //配列$products
 foreach($products as $p){
 $id = $p['id'];
