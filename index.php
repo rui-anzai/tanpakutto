@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@rui-anzai 
-rui-anzai
-/
-tanpakutto
-1
-02
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-tanpakutto/index.php /
-@TaKaGiMaSa
-TaKaGiMaSa cssを追加
-Latest commit 4f708d7 3 hours ago
- History
- 2 contributors
-@rui-anzai@TaKaGiMaSa
-123 lines (113 sloc)  3.63 KB
-  
 <?php
   include 'conn.php';
   include 'insert.php';
