@@ -73,7 +73,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       }
       ?>
      <h2>直近一週間のグラフ</h2> 
-     <h2><?php echo (int)$goukei; ?>グラム摂取しました</h2>
+     <h2>本日は<?php echo (int)$goukei; ?>グラム摂取しました</h2>
          <!--棒グラフの表示-->   
       <div class="chart-container" style="position: relative; width: 950px; height: 700px;">
           <canvas id="myLineChart">ここにチャート表示</canvas>
@@ -152,7 +152,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
                     xAdjust: 0,
                     yAdjust: 0,
                     enabled: true,
-                    content: '平均気温(2019) 15.6℃'
+                    content: '1日の目標摂取量[タンパク質]'
                 }
             },
 
