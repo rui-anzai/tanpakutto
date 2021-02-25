@@ -51,8 +51,8 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       //配列$products          
       foreach($total_products as $p){
       //
-      $total = $total . '"'. $p['total'].'",';
-      $date_time = $date_time . '"'. $p['date_time'] .'",';   
+      $sum = $sum . '"'. $p['sum'].'",';
+      $time = $time . '"'. $p['time'] .'",';   
       }  
       //更新ボタン
       if(isset($_POST['add'])) {
@@ -89,11 +89,11 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       var myLineChart = new Chart(cty, {
         type: 'line',
         data: {
-             labels: [<?php echo $date_time ?>],//各棒の名前（name)
+             labels: [<?php echo $time ?>],//各棒の名前（name)
           datasets: [
             {
               label: '直近一週間のタンパク質摂取量',
-              data: [<?php echo $total ?>],//各縦棒の高さ(値段)
+              data: [<?php echo $sum ?>],//各縦棒の高さ(値段)
                
               borderColor: "#fdbf64",
               backgroundColor: "rgba(0,0,0,0)"
