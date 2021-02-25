@@ -65,6 +65,7 @@ h1{
     overflow: hidden;
     opacity: 0;
     transition: 0.8s;
+    
 }
 
 /*クリックで中身表示*/
