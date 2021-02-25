@@ -11,10 +11,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
 
       <h1>タンパクっと</h1>
-      <h2>タンパクっと</h2>
-
-
-
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
