@@ -50,9 +50,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       <?php
       //配列$products          
       foreach($total_products as $p){
-
-      $total = $p['total'];
-      //
       $sum = $sum . '"'. $p['sum'].'",';
       $time = $time . '"'. $p['time'] .'",';   
       }  

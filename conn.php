@@ -65,3 +65,26 @@
      $db = null;//接続を切る
      }
 ?>
+
+<?php
+  $total_products = array();
+  try
+  {
+  // mysql接続
+   $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
+   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+   // 食品一覧を取得
+   $stmt4 = $db->query("SELECT * FROM `chart` WHERE 1");
+   $total_products = $stmt4->fetchAll(PDO::FETCH_ASSOC);
+        
+     //接続を切る
+     //$db = null;
+     }
+     catch(PDOException $e)
+     {
+      echo $e->getMessage();
+      exit;
+     $db = null;//接続を切る
+     }
+?>
