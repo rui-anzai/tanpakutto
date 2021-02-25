@@ -133,7 +133,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
                 drawTime: 'afterDatasetsDraw',
                 id: 'a-line-1', // 線のid名を指定（他の線と区別するため）
                 mode: 'horizontal', // 水平を指定
-                scaleID: 'x軸', // 基準とする軸のid名
+                scaleID: 'y軸', // 基準とする軸のid名
                 value: 15.6, // 引きたい線の数値（始点）
                 endValue: 15.6, // 引きたい線の数値（終点）
                 borderColor: 'red', // 線の色
