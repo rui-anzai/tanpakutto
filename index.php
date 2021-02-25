@@ -12,13 +12,17 @@
          <script src="app.js" defer></script>
     </head>
     <body>
+      
       <h1>タンパクっと</h1>
+      <br></br>
+      
+      <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
          <div class="aaaa">
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
 <div class="hidden_show">
-<!--非表示ここから-->
+<!--非表示ここからwidth="965" height="500"-->
 <table border="2">
 <tr><th>食品</th><th>タンパク質</th><th>選択数</th></tr>
 <?php
