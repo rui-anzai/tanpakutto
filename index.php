@@ -10,6 +10,7 @@
         <title>タンパクっと</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js'></script>
+        <script src="app.js" defer></script>
     </head>
     <body>
       <h1>タンパクっと</h1>
