@@ -190,7 +190,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}ã‚°ãƒ
     }
 
 
-    }
+    
 
 
 
