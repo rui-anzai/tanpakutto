@@ -35,9 +35,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 </div>
 </div>
 
-      <!--<div class="aaaa">
-      <div class="reol">-->
-
     </head>
     <body>
       <div class="aaaa">
@@ -48,7 +45,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           <tr><th>       
           <option value="who"></option>
       <?php
-      //配列$products          
       foreach($total_products as $p){
 
       $sum = $sum . '"'. $p['sum'].'",';
@@ -76,9 +72,9 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           echo "";
       }
       ?>
+     <h2>直近一週間のグラフ</h2> 
      <h2><?php echo (int)$goukei; ?>グラム摂取しました</h2>
-         <!--棒グラフの表示-->
-     <h2>直近一週間</h2>    
+         <!--棒グラフの表示-->   
       <div class="chart-container" style="position: relative; width: 950px; height: 700px;">
           <canvas id="myLineChart">ここにチャート表示</canvas>
       </div>
@@ -87,7 +83,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
      //.getContext('2d');はcanvasでグラフとか描画するために使う 
      var cty = document.getElementById("myLineChart").getContext('2d');
       var myLineChart = new Chart(cty, {
-        type: 'line',
+        type: 'bar',
         data: {
              labels: [<?php echo $time ?>],//各棒の名前（name)
           datasets: [
