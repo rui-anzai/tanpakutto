@@ -122,7 +122,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         xAxes: [{
           ticks: {
             autoSkip: true,
-            maxTicksLimit: 20 //値の最大表示数
+            maxTicksLimit: 7 //値の最大表示数
           }
         }]
       }
