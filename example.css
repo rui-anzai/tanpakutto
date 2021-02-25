@@ -29,13 +29,15 @@ h1{
   .aaaa{
       display: flex;
       flex-direction: row;
-      height: 400px;
+      height: 600px;
   }
   
   /*全体*/
 .hidden_box {
     margin: 2em 0;/*前後の余白*/
     padding: 0;
+      width: 290px;
+      height: 200px;
 }
 
 /*ボタン装飾*/
@@ -55,7 +57,6 @@ h1{
 .hidden_box input {
     display: none;
 }
-
 
 /*中身を非表示にしておく*/
 .hidden_box .hidden_show {
