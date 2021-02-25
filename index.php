@@ -133,7 +133,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
                 drawTime: 'afterDatasetsDraw',
                 id: 'a-line-1', // 線のid名を指定（他の線と区別するため）
                 mode: 'horizontal', // 水平を指定
-                scaleID: 'y左軸', // 基準とする軸のid名
+                scaleID: 'x左軸', // 基準とする軸のid名
                 value: 15.6, // 引きたい線の数値（始点）
                 endValue: 15.6, // 引きたい線の数値（終点）
                 borderColor: 'red', // 線の色
@@ -157,35 +157,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
                     content: '平均気温(2019) 15.6℃'
                 }
             },
-            {
-                type: 'line', // 線分を指定
-                drawTime: 'afterDatasetsDraw',
-                id: 'a-line-2', // 線のid名を指定（他の線と区別するため）
-                mode: 'horizontal', // 水平を指定
-                scaleID: 'y左軸', // 基準とする軸のid名
-                value: 13.7, // 引きたい線の数値（始点）
-                endValue: 13.7, // 引きたい線の数値（終点）
-                borderColor: 'rgba(60,200,60,0.8)', // 線の色
-                borderWidth: 3, // 線の幅（太さ）
-                borderDash: [2, 2],
-                borderDashOffset: 1,
-                label: { // ラベルの設定
-                    backgroundColor: 'rgba(255,255,255,0.8)',
-                    bordercolor: 'rgba(60,200,60,0.8)',
-                    borderwidth: 2,
-                    fontSize: 10,
-                    fontStyle: 'bold',
-                    fontColor: '#333',
-                    xPadding: 10,
-                    yPadding: 10,
-                    cornerRadius: 3,
-                    position: 'left',
-                    xAdjust: 0,
-                    yAdjust: 0,
-                    enabled: true,
-                    content: '平均気温(1919) 13.7℃'
-                }
-            }
         ]
     }
         }
