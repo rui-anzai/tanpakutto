@@ -244,13 +244,17 @@ var chartJsPluginCenterLabel = {
     // ラベルの HTML
     //数値挿入
 
-    if(x <= 65){
+    /*if(x <= 65){
         console.log(`本日は残り${65 - x}グラムです`);
     }else{
         console.log("本日のノルマは達成されています")
-    }
+    }*/
 
-    var value = `本日は残り${65 - x}グラムです`;
+    if(x <= 65){
+      var value = `本日は残り${65 - x}グラムです`;
+    }else{
+      var value = "本日のノルマは完了しています"
+    }
 
     var labelBox = document.createElement('div');
     labelBox.classList.add('label-box');
