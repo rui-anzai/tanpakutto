@@ -218,16 +218,16 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
   };
 
 // 文字列に変換
-  var dataString = dataset.data[index].toString();
+  //var dataString = dataset.data[index].toString();
 
   // 文字の配置（ "0" のときは配置しない）
-  if( dataString!=="0" ) {
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    var padding = 5;
-    var position = element.tooltipPosition();
-    ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
-  }
+  // if( dataString!=="0" ) {
+  //   ctx.textAlign = 'center';
+  //   ctx.textBaseline = 'middle';
+  //   var padding = 5;
+  //   var position = element.tooltipPosition();
+  //   ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
+  // }
 
 
   // グラフオプション
