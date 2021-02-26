@@ -21,7 +21,7 @@
 
       <br></br>
       <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
-      
+
 <canvas id="chart-area" width="320" height="240"></canvas>
 <div class="hidden_box">
 <label for="label1">選択してください</label>
@@ -217,7 +217,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
     // 自動サイズ変更をしない
     responsive: false,
     // マウスオーバー時に情報を表示しない
-    tooltips: { enabled: false },
+    tooltips: { enabled: true },
   };
 
   // グラフ描画
