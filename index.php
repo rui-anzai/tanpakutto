@@ -206,7 +206,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 
   var data = {
     datasets: [{
-      data: [87, 13],
+      data: [total_protein],
       backgroundColor: [blue, gray],
     }],
   };
@@ -251,7 +251,7 @@ var chartJsPluginCenterLabel = {
     }*/
 
 
-    //
+    //円グラフの中の条件分岐
     if(total_protein <= 65){
       var value = `本日は残り${65 - total_protein}グラムです`;
     }else{
