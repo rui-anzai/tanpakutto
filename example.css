@@ -73,3 +73,35 @@ h1{
     height: auto;
     opacity: 1;
 }
+
+.label-box {
+    /* box-sizing はプラグインで padding-top を付与したときに height を変えないようにするために付けています */
+    box-sizing: border-box;
+    height: 240px;
+    width: 320px;
+    /* 縦横中央揃え */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* グラフ上に配置 */
+    margin-top: -240px;
+  }
+  
+  /* タイトル、値 */
+  .label-box .label {
+    color: #636363;
+    text-align: center;
+  }
+  .label-box .label .title {
+    font-size: 20px;
+    letter-spacing: .05em;
+    margin-bottom: 3px;
+    padding-top: 13px;
+  }
+  .label-box .label .value {
+    font-size: 60px;
+    line-height: 1em;
+  }
+  .label-box .label .value .per {
+    font-size: 20px;
+  }
