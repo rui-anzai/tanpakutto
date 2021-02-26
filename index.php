@@ -93,7 +93,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       </div>
      <script>
      //.getContext('2d');はcanvasでグラフとか描画するために使う 
-     /*var cty = document.getElementById("myLineChart").getContext('2d');
+     var cty = document.getElementById("myLineChart").getContext('2d');
       var myLineChart = new Chart(cty, {
         type: 'bar',
         data: {
@@ -175,7 +175,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         }
   }); 
   
-  var x = <?php echo (int)$goukei ?>;
+  /*var x = <?php echo (int)$goukei ?>;
   var ctx = document.getElementById("myPieChart");
   var myPieChart = new Chart(ctx, {
       type: 'doughnut',
