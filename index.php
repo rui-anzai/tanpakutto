@@ -198,6 +198,9 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       }
   });*/
 
+var 
+
+
   // グラフオプションの title 指定を削除しただけです
 (function() {
   var blue = 'rgb(54, 162, 235)';
@@ -206,13 +209,13 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
   //円グラフの中身の割合
   var data = {
     datasets: [{
-      // if(total_protein <= 65){
-      //   data: [total_protein,65-total_protein],
-      // }
-      // else{
-      //   data: [total_protein],
-      // }
-      data: [87, 13],
+       /*if(total_protein <= 65){
+         data: [total_protein,65-total_protein],
+       }
+       else{
+         data: [total_protein],
+       */}
+      data: [87, -13],
       backgroundColor: [blue, gray],
     }],
   };
