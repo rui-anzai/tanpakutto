@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <link rel="stylesheet" type="text/css" href="example.css">
+        <link rel="stylesheet" href="example.css">
         <meta charset="utf-8">
         <title>タンパクっと</title>
 
