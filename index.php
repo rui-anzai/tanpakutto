@@ -21,8 +21,16 @@
 
       <br></br>
       <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
+<div class="label-box">
+  <canvas id="chart-area" width="320" height="240"></canvas>
+  <div class="label-box" styke="padding-top:32px">
+    <div class="label"><script>value</script>
+      <span class="per">%</span>
+    </div>
+  </div>
+</div>
 
-<canvas id="chart-area" width="320" height="240"></canvas>
+
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
@@ -50,6 +58,8 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 <!-- 円グラフのclassを定義 -->
 <div class="chart-wrap" style="position: relative; display: inline-block;　display:flex; width: 800px; height: 700px;">
      <canvas id="myPieChart"></canvas>
+
+
      </div>   
   </div>   
   <table border="1">
@@ -263,6 +273,7 @@ var chartJsPluginCenterLabel = {
 Chart.plugins.register(chartJsPluginCenterLabel);
 
       </script>
+
       <!--index.phpにpost-->
       <form action="index.php" method="post">
         <button type="submit" name="add">登録</button>
