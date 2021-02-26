@@ -177,8 +177,8 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         }
   }); 
   
-  /*var x = <?php echo (int)$goukei ?>;
-  var ctx = document.getElementById("myPieChart");
+  var x = <?php echo (int)$goukei ?>;
+  /*var ctx = document.getElementById("myPieChart");
   var myPieChart = new Chart(ctx, {
       type: 'doughnut',
       data: {
@@ -244,8 +244,13 @@ var chartJsPluginCenterLabel = {
     // ラベルの HTML
     //数値挿入
 
-    var y = 22;
-    var value = chart.y.datasets[0].y[0];
+    if(x <= 65){
+        console.log(`本日は残り${65 - x}グラムです`);
+    }else{
+        console.log("本日のノルマは達成されています")
+    }
+
+    var value = `本日は残り${65 - x}グラムです`;
 
     var labelBox = document.createElement('div');
     labelBox.classList.add('label-box');
