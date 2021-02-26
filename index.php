@@ -230,7 +230,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}ã‚°ãƒ
   });
 })();
 
-ar chartJsPluginCenterLabel = {
+var chartJsPluginCenterLabel = {
   labelShown: false,
 
   afterRender: function (chart) {
