@@ -24,6 +24,7 @@
 
 <canvas id="chart-area" width="320" height="240"></canvas>
 <div class="hidden_box">
+<div class="aaaa">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
 <div class="hidden_show">

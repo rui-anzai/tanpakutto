@@ -73,6 +73,7 @@ h1{
     height: auto;
     opacity: 1;
 }
+
 .label-box {
     /* box-sizing はプラグインで padding-top を付与したときに height を変えないようにするために付けています */
     box-sizing: border-box;
