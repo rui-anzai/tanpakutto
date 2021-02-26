@@ -177,7 +177,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         }
   }); 
   
-  var x = <?php echo (int)$goukei ?>;
+  var total_protein = <?php echo (int)$goukei ?>;
   /*var ctx = document.getElementById("myPieChart");
   var myPieChart = new Chart(ctx, {
       type: 'doughnut',
@@ -250,8 +250,10 @@ var chartJsPluginCenterLabel = {
         console.log("本日のノルマは達成されています")
     }*/
 
-    if(x <= 65){
-      var value = `本日は残り${65 - x}グラムです`;
+
+    //
+    if(total_protein <= 65){
+      var value = `本日は残り${65 - total_protein}グラムです`;
     }else{
       var value = "本日のノルマは完了しています"
     }
