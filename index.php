@@ -14,6 +14,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js'></script>
+
     </head>
     <body>
       <h1>タンパクっと</h1>
@@ -171,9 +172,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         ]
     }
         }
-  });   
-  var x = aaa;   
-  console.log(x);
+  });      
   var ctx = document.getElementById("myPieChart");
   var myPieChart = new Chart(ctx, {
       type: 'doughnut',
@@ -183,7 +182,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
               backgroundColor: [
                   "#f37056"
               ],
-              data: [87 13]
+              data: [87, 13]
           }]
       },
       options: {
