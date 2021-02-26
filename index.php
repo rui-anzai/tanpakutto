@@ -22,10 +22,6 @@
       <br></br>
       <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
 
-
-
-
-
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
@@ -176,8 +172,27 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         ]
     }
         }
-  });      
+  });
+  var pie_chart_data = <?php (int)$goukei ?>;    
+  var ctx = document.getElementById("myPieChart");
+  var myPieChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+          labels: ["カロリー摂取量"],
+          datasets: [{
+              backgroundColor: [
+                  "#f37056"
+              ],
+              data: [pie_chart_data]
+          }]
+      },
+      options: {
+          title: {
+              display: true,
 
+          }
+      }
+  });
       </script>
       <!--index.phpにpost-->
       <form action="index.php" method="post">
