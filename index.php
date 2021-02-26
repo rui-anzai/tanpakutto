@@ -130,7 +130,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           id : 'x軸',
           ticks: {
             autoSkip: true,
-            maxTicksLimit: 6 //値の最大表示数
+            maxTicksLimit: 7  // 最大表示数
           }
         }],
         yAxes: [{
