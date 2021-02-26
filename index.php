@@ -183,7 +183,13 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
               backgroundColor: [
                   "#f37056"
               ],
-              data: [x, 13]
+              //円グラフの処理
+              if(x <= 65){
+                data: [x, 13]
+              }else{
+                data['達成されました']
+              }
+              //data: [x, 13]
           }]
       },
       options: {
