@@ -245,7 +245,7 @@ var chartJsPluginCenterLabel = {
     //数値挿入
 
     var y = 22;
-    var value = chart.y.datasets[0].data[0];
+    var value = chart.y.datasets[0].y[0];
 
     var labelBox = document.createElement('div');
     labelBox.classList.add('label-box');
