@@ -171,7 +171,8 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}ã‚°ãƒ
         ]
     }
         }
-  });      
+  });   
+  var x = <?php (int)$goukei ?>;   
   var ctx = document.getElementById("myPieChart");
   var myPieChart = new Chart(ctx, {
       type: 'doughnut',
@@ -181,7 +182,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}ã‚°ãƒ
               backgroundColor: [
                   "#f37056"
               ],
-              data: [87, 13]
+              data: [x, 13]
           }]
       },
       options: {
