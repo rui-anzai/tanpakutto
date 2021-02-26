@@ -229,7 +229,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
   });
 })();
 
-var chartJsPluginCenterLabel = {
+ar chartJsPluginCenterLabel = {
   labelShown: false,
 
   afterRender: function (chart) {
@@ -243,17 +243,20 @@ var chartJsPluginCenterLabel = {
     var labelBox = document.createElement('div');
     labelBox.classList.add('label-box');
     labelBox.innerHTML = '<div class="label">'
-      + '<div class="title">Progress</div>'
-      + '<div class="value">'
       + value
       + '<span class="per">%</span>'
       + '</div>';
-      + '</div>';
+    // ラベル上部の padding
+    // (タイトルを表示しない場合は不要です)
+    var paddingTop = Math.round(chart.chartArea.top);
+    labelBox.setAttribute('style', 'padding-top:' + paddingTop + 'px');
     // ラベル描画
     var canvas = chart.ctx.canvas;
     canvas.parentNode.insertBefore(labelBox, canvas.nextElementSibling);
   },
 };
+
+// 上記プラグインの有効化
 Chart.plugins.register(chartJsPluginCenterLabel);
 
       </script>
