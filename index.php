@@ -173,7 +173,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}ã‚°ãƒ
     }
         }
   });
-  var x = <?php (int)$goukei ?>
+  var x = <?php (int)$goukei ?>;
   var ctx = document.getElementById("myPieChart");
   var myPieChart = new Chart(ctx, {
       type: 'doughnut',
