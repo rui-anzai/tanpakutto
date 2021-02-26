@@ -21,7 +21,8 @@
 
       <br></br>
       <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
-
+      
+<canvas id="chart-area" width="320" height="240"></canvas>
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
