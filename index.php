@@ -1,7 +1,6 @@
 
 
 <?php
-
   include 'conn.php';
   include 'insert.php';
 ?>
@@ -204,12 +203,31 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
   var blue = 'rgb(54, 162, 235)';
   var gray = 'rgb(99, 99, 99)';
 
+  //円グラフの中身の割合
   var data = {
     datasets: [{
-      data: [total_protein],
+      if(total_protein <= 65){
+        data: [total_protein,65-total_protein],
+      }else{
+        data: [total_protein],
+      }
+      //data: [87, 13],
       backgroundColor: [blue, gray],
     }],
   };
+
+// 文字列に変換
+  /*var dataString = dataset.data[index].toString();
+
+  // 文字の配置（ "0" のときは配置しない）
+  if( dataString!=="0" ) {
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    var padding = 5;
+    var position = element.tooltipPosition();
+    ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
+  }*/
+
 
   // グラフオプション
   var options = {
