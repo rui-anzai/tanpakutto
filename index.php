@@ -254,9 +254,7 @@ var chartJsPluginCenterLabel = {
     canvas.parentNode.insertBefore(labelBox, canvas.nextElementSibling);
   },
 };
-
-
-
+Chart.plugins.register(chartJsPluginCenterLabel);
 
       </script>
       <!--index.phpにpost-->
