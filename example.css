@@ -8,11 +8,12 @@ h1{
     margin: auto;
     padding: auto;
   }
-  
-  .reol{
-   display: inline-block;
-   display:flex;
-  }
+  h2 { 
+    text-align: center 
+    }
+body{
+   background-color: white;
+}
   table {
      
       width: 290px;
@@ -30,8 +31,42 @@ h1{
       display: flex;
       flex-direction: row;
       height: 600px;
+    
   }
   
+  /***　江戸カラー　***/
+
+.momoyama-table{
+	table-layout: fixed;
+}
+
+/* ヘッダー */
+.momoyama-table thead th {
+	background:#3F4551;
+	font-weight: bold;
+	color:#fff;
+}
+
+
+/* ボディ項目・フッター項目 */
+.momoyama-table tbody th {
+	background:#E5E2E4;
+	font-weight: bold;
+}
+
+/* ボディデータ・フッターデータ */
+.momoyama-table tbody td {
+	text-align:center;
+}
+
+/* 偶数行　１行ごとの色変えが不要なら削除 */
+.momoyama-table tr:nth-child(2n) td {
+    background: #FBFBF6;
+}
+/* 偶数行の項目 １行ごとの色変えが不要なら削除 */
+.momoyama-table tr:nth-child(2n) th {
+    background: #E6E6E6;
+}
   /*全体*/
 .hidden_box {
     margin: 2em 0;/*前後の余白*/
@@ -42,22 +77,28 @@ h1{
 
 /*ボタン装飾*/
 .hidden_box label {
-    padding: 15px;
-    font-weight: bold;
-    border: solid 2px black;
-    cursor :pointer;
+      display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+
 }
 
 /*ボタンホバー時*/
-.hidden_box label:hover {
-    background: #efefef;
+.hidden_box label:active {
+   /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
 }
 
 /*チェックは見えなくする*/
 .hidden_box input {
     display: none;
 }
-
 
 /*中身を非表示にしておく*/
 .hidden_box .hidden_show {
@@ -66,7 +107,6 @@ h1{
     overflow: hidden;
     opacity: 0;
     transition: 0.8s;
-
 }
 
 /*クリックで中身表示*/
@@ -74,4 +114,48 @@ h1{
     padding: 10px 0;
     height: auto;
     opacity: 1;
+}
+
+
+
+.btn-social-circle {
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 23px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+  transition: .3s;
+        
+}
+.btn-social-circle i {
+  line-height: 50px;
+}
+.btn-social-circle:hover　{
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.28);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+social-circle--hatebu {
+  color: #49a8fb;
+  background-image: linear-gradient(#d2efff 0%, #76befb 100%);
+}
+.btn-social-circle--pocket {
+  color: #ff6d82;
+  background-image: linear-gradient(#ffcfd7 0%, #ff7285 100%);
+}
+.btn-social-circle--feedly {
+  color: #60d245;
+  background-image: linear-gradient(#b9ffca 0%, #80e067 100%);
+}
+
+.sousa{
+  text-align:  center;        
+
 }
