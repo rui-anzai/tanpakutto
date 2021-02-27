@@ -73,8 +73,10 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           	// db接続
           	$db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
           	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
-          	$db->exec("UPDATE `food_products` SET `order_quantity`=0 WHERE 1"); //注文数を0にリセット
-          	
+            //$db->exec("UPDATE `food_products` SET `order_quantity`=0 WHERE 1"); //注文数を0にリセット
+            $db->exec("SELECT * FROM `chart` WHERE date_time = (SELECT MAX(date_time) FROM chart)");
+            $db->exec("UPDATE `chart` SET `total`= 0 WHERE 1");
+          	$db = null;//接続を切る
           	}
           	catch(PDOException $e)
           	{
