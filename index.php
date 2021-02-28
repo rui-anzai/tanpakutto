@@ -25,6 +25,98 @@
 
 
 <canvas id="chart-area" width="320" height="240"></canvas>
+<script>
+  (function() {
+  var blue = 'rgb(54, 162, 235)';
+  var gray = 'rgb(99, 99, 99)';
+
+  //円グラフの中身の割合
+  var data = {
+    datasets: [{
+      data: [total_protein,65-total_protein],
+      backgroundColor: [blue, gray],
+    }],
+  };
+
+// 文字列に変換
+  //var dataString = dataset.data[index].toString();
+
+  // 文字の配置（ "0" のときは配置しない）
+  // if( dataString!=="0" ) {
+  //   ctx.textAlign = 'center';
+  //   ctx.textBaseline = 'middle';
+  //   var padding = 5;
+  //   var position = element.tooltipPosition();
+  //   ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
+  // }
+
+
+  // グラフオプション
+  var options = {
+    // グラフの太さ（中央部分を何％切り取るか）
+    cutoutPercentage: 65,
+    // 凡例を表示しない
+    legend: { display: false },
+    // 自動サイズ変更をしない
+    responsive: false,
+    title: {
+      display: true,
+      fontSize: 16,
+      text: 'baka',
+    },
+    // マウスオーバー時に情報を表示しない
+    tooltips: { enabled: true },
+  };
+
+
+
+
+  // グラフ描画
+  var ctx = document.getElementById('chart-area').getContext('2d');
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options
+  });
+})();
+
+var chartJsPluginCenterLabel = {
+  labelShown: false,
+
+  afterRender: function (chart) {
+    // afterRender は何度も実行されるので、２回目以降は処理しない
+    if (this.labelShown) {
+      return;
+    }
+    this.labelShown = true;
+    // ラベルの HTML
+    //数値挿入
+
+    /*if(x <= 65){
+        console.log(`本日は残り${65 - x}グラムです`);
+    }else{
+        console.log("本日のノルマは達成されています")
+    }*/
+
+
+    //円グラフの中の条件分岐
+    if(total_protein <= 65){
+      var value = `本日は残り${65 - total_protein}グラムです`;
+    }else{
+      var value = "本日のノルマは完了しています"
+    }
+
+    var labelBox = document.createElement('div');
+    labelBox.classList.add('label-box');
+    labelBox.innerHTML = '<div class="label">'
+      + value
+      + '<span class="per">%</span>'
+      + '</div>';
+};
+
+// 上記プラグインの有効化
+Chart.plugins.register(chartJsPluginCenterLabel);
+</script>
 
 
 
@@ -210,104 +302,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 
 
   // グラフオプションの title 指定を削除しただけです
-(function() {
-  var blue = 'rgb(54, 162, 235)';
-  var gray = 'rgb(99, 99, 99)';
 
-  //円グラフの中身の割合
-  var data = {
-    datasets: [{
-      data: [total_protein,65-total_protein],
-      backgroundColor: [blue, gray],
-    }],
-  };
-
-// 文字列に変換
-  //var dataString = dataset.data[index].toString();
-
-  // 文字の配置（ "0" のときは配置しない）
-  // if( dataString!=="0" ) {
-  //   ctx.textAlign = 'center';
-  //   ctx.textBaseline = 'middle';
-  //   var padding = 5;
-  //   var position = element.tooltipPosition();
-  //   ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
-  // }
-
-
-  // グラフオプション
-  var options = {
-    // グラフの太さ（中央部分を何％切り取るか）
-    cutoutPercentage: 65,
-    // 凡例を表示しない
-    legend: { display: false },
-    // 自動サイズ変更をしない
-    responsive: false,
-    title: {
-      display: true,
-      fontSize: 16,
-      text: 'baka',
-    },
-    // マウスオーバー時に情報を表示しない
-    tooltips: { enabled: true },
-  };
-
-
-
-
-  // グラフ描画
-  var ctx = document.getElementById('chart-area').getContext('2d');
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: data,
-    options: options
-  });
-})();
-
-var chartJsPluginCenterLabel = {
-  labelShown: false,
-
-  afterRender: function (chart) {
-    // afterRender は何度も実行されるので、２回目以降は処理しない
-    if (this.labelShown) {
-      return;
-    }
-    this.labelShown = true;
-    // ラベルの HTML
-    //数値挿入
-
-    /*if(x <= 65){
-        console.log(`本日は残り${65 - x}グラムです`);
-    }else{
-        console.log("本日のノルマは達成されています")
-    }*/
-
-
-    //円グラフの中の条件分岐
-    if(total_protein <= 65){
-      var value = `本日は残り${65 - total_protein}グラムです`;
-    }else{
-      var value = "本日のノルマは完了しています"
-    }
-
-    var labelBox = document.createElement('div');
-    labelBox.classList.add('label-box');
-    labelBox.innerHTML = '<div class="label">'
-      + value
-      + '<span class="per">%</span>'
-      + '</div>';
-    // ラベル上部の padding
-    // (タイトルを表示しない場合は不要です)
-    var paddingTop = Math.round(chart.chartArea.top);
-    labelBox.setAttribute('style', 'padding-top:' + paddingTop + 'px');
-    // ラベル描画
-    var canvas = chart.ctx.canvas;
-    canvas.parentNode.insertBefore(labelBox, canvas.nextElementSibling);
-  },
-};
-
-// 上記プラグインの有効化
-Chart.plugins.register(chartJsPluginCenterLabel);
 
       </script>
 
