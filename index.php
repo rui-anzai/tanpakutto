@@ -23,6 +23,7 @@
 <!-- ドーナツチャート読み込み -->
 
 <canvas id="myPieChart"></canvas>
+<div id = pie-chart></div>
 
 <div class="hidden_box">
 <label for="label1">選択してください</label>
@@ -90,6 +91,23 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       ?>
 
      <script>
+      function pie(){
+        if(total_protein <= 65){
+        var value = `本日は残り${65 - total_protein}グラムです`;
+        }else{
+          var value = "本日のノルマは完了しています"
+        }
+        document.getElementById('pie-chart').innerHTML = value ;
+      }
+
+      /*if(total_protein <= 65){
+        var value = `本日は残り${65 - total_protein}グラムです`;
+      }else{
+        var value = "本日のノルマは完了しています"
+      }*/
+
+      
+     
       var total_protein = <?php echo (int)$goukei ?>;
       var blue = 'rgb(54, 162, 235)';
       var gray = 'rgb(99, 99, 99)';
