@@ -99,8 +99,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}ã‚°ãƒ
         data: {
           datasets: [{
               backgroundColor: [blue, gray],
-              //data: [total_protein,65-total_protein]
-              data: [32,22]
+              data: [total_protein,65-total_protein]
           }]
         },
         options: {
