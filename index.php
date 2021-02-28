@@ -21,7 +21,13 @@
       <br></br>
       <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
 <!-- ドーナツチャート読み込み -->
+
+
+
 <canvas id="chart-area" width="320" height="240"></canvas>
+
+
+
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
@@ -237,9 +243,17 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
     legend: { display: false },
     // 自動サイズ変更をしない
     responsive: false,
+    title: {
+      display: true,
+      fontSize: 16,
+      text: 'baka',
+    },
     // マウスオーバー時に情報を表示しない
     tooltips: { enabled: true },
   };
+
+
+
 
   // グラフ描画
   var ctx = document.getElementById('chart-area').getContext('2d');
