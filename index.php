@@ -102,13 +102,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       }
       pie();
 
-      /*if(total_protein <= 65){
-        var value = `本日は残り${65 - total_protein}グラムです`;
-      }else{
-        var value = "本日のノルマは完了しています"
-      }*/
-
-      
       var blue = 'rgb(54, 162, 235)';
       var gray = 'rgb(99, 99, 99)';
       var ctx = document.getElementById("myPieChart");
