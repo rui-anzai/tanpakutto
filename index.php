@@ -25,13 +25,23 @@
 <canvas id="myPieChart"></canvas>
 <div id = pie-chart></div>
 
+
+
+
+<div class="aaaa">
+
+
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
 <div class="hidden_show">
+  
 <!--非表示ここから-->
-<table border="2">
+
+<table  class="momoyama-table">
+  <thead>
 <tr><th>食品</th><th>タンパク質</th><th>選択数</th></tr>
+</thead>
 <?php
 
 //配列$products
@@ -49,15 +59,10 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 </div>
 </div>
 
-
-     
-
      </div>   
-  </div>   
-  <table border="1">
-          <tbody>
-          <tr><th>       
-          <option value="who"></option>
+
+  </div> 
+
       <?php
 
       foreach($total_products as $p){
@@ -121,14 +126,14 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       });
       </script>
 
-
-
      <h2>直近一週間のグラフ</h2> 
      <h2>本日は<?php echo (int)$goukei; ?>グラム摂取しました</h2>
-         <!--棒グラフの表示-->   
+         <!--棒グラフの表示-->  
+ <div class="bar">
+
       <div class="chart-container" style="position: relative; width: 950px; height: 700px;">
           <canvas id="myLineChart">ここにチャート表示</canvas>
-      </div>
+      </div>     
      <script>
      //.getContext('2d');はcanvasでグラフとか描画するために使う 
      var cty = document.getElementById("myLineChart").getContext('2d');
@@ -309,11 +314,27 @@ Chart.plugins.register(chartJsPluginCenterLabel);*/
 
       </script>
 
-      <!--index.phpにpost-->
-      <form action="index.php" method="post">
+ <form action="index.php" method="post">
+<div class="sousa">
+<button class="btn-social-circle btn-social-circle--hatebu">
+  <img src="touroku.png" alt="海の写真" title="登録" 　width="50" height="30">
+</button>
+<button class="btn-social-circle btn-social-circle--pocket">
+   <img src="gomi.png" alt="海の写真" title="削除" 　width="50" height="30">
+</button>
+<button class="btn-social-circle btn-social-circle--feedly">
+  <img src="reload.png" alt="海の写真" name="update"　title="更新" 　width="40" height="30">
+</button>
+     </form> 
+     </div>
+    </div>
+   
+    <form action="index.php" method="post">
+
         <button type="submit" name="add">登録</button>
         <button type="submit" name="update">更新</button>
         <button type="submit" name="remove">削除</button>
-      </form> 
+      </form>    
+      -->    
 	</body>
 </html>
