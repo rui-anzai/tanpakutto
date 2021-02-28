@@ -89,6 +89,35 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           echo "";
       }
       ?>
+
+     <canvas id="myPieChart"></canvas>
+     <script>
+      var ctx = document.getElementById("myPieChart");
+      var myPieChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ["A型", "O型", "B型", "AB型"],
+          datasets: [{
+              backgroundColor: [
+                  "#BB5179",
+                  "#FAFF67",
+                  "#58A27C",
+                  "#3C00FF"
+              ],
+              data: [38, 31, 21, 10]
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: '血液型 割合'
+          }
+        }
+      });
+      </script>
+
+
+
      <h2>直近一週間のグラフ</h2> 
      <h2>本日は<?php echo (int)$goukei; ?>グラム摂取しました</h2>
          <!--棒グラフの表示-->   
