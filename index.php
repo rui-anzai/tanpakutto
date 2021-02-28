@@ -90,25 +90,21 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       ?>
 
      <script>
+      var total_protein = <?php echo (int)$goukei ?>;
+      var blue = 'rgb(54, 162, 235)';
+      var gray = 'rgb(99, 99, 99)';
       var ctx = document.getElementById("myPieChart");
       var myPieChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-          labels: ["A型", "O型", "B型", "AB型"],
           datasets: [{
-              backgroundColor: [
-                  "#BB5179",
-                  "#FAFF67",
-                  "#58A27C",
-                  "#3C00FF"
-              ],
-              data: [38, 31, 21, 10]
+              backgroundColor: [blue, gray],
+              data: [total_protein,65-total_protein]
           }]
         },
         options: {
           title: {
-            display: true,
-            text: '血液型 割合'
+            
           }
         }
       });
