@@ -1,3 +1,5 @@
+
+
 <?php
 
   include 'conn.php';
@@ -24,6 +26,8 @@
 
 
 <div class="aaaa">
+
+
 <div class="hidden_box">
 <label for="label1">選択してください</label>
 <input type="checkbox" id="label1"/>
@@ -53,13 +57,13 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
 </div>
 
 <!-- 円グラフのclassを定義 -->
+
 <div class="chart-wrap" style="position: relative; display: inline-block;　display:flex; width: 700px; height: 550px;">
      <canvas id="myPieChart"></canvas>
      </div>   
 
   </div> 
-      
-         
+
       <?php
 
       foreach($total_products as $p){
@@ -88,11 +92,13 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       } else {
           echo "";
       }
+
       ?>        
      <h2>直近一週間のグラフ</h2> 
      <h2>本日は<?php echo (int)$goukei; ?>グラム摂取しました</h2>
          <!--棒グラフの表示-->  
  <div class="bar">
+
       <div class="chart-container" style="position: relative; width: 950px; height: 700px;">
           <canvas id="myLineChart">ここにチャート表示</canvas>
       </div>     
