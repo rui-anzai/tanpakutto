@@ -99,6 +99,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         }
         document.getElementById('pie-chart').innerHTML = value ;
       }
+      pie();
 
       /*if(total_protein <= 65){
         var value = `本日は残り${65 - total_protein}グラムです`;
