@@ -202,17 +202,6 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
         }
   }); 
   
-  var total_protein = <?php echo (int)$goukei ?>;
-
-
-
-
-
-
-
-
-
-
 
 /*
   // グラフオプションの title 指定を削除しただけです
