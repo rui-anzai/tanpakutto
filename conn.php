@@ -52,7 +52,7 @@
    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
    // 食品一覧を取得
-   $stmt3 = $db->query("SELECT DATE_FORMAT(date_time, '%Y-%m-%d') AS time, MAX(total) AS sum FROM chart GROUP BY DATE_FORMAT(date_time, '%Y%m%d')");
+   $stmt3 = $db->query("SELECT DATE_FORMAT(date_time, '%Y-%m-%d') AS time, MAX(total) AS sum FROM chart WHERE date_time >= (NOW() - INTERVAL 7 DAY) GROUP BY DATE_FORMAT(date_time, '%Y%m%d')");
    $total_products = $stmt3->fetchAll(PDO::FETCH_ASSOC);
         
      //接続を切る
