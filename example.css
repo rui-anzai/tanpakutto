@@ -43,6 +43,7 @@ color: #ff6d82;
 background-image: linear-gradient(#ffcfd7 0%, #ff7285 100%);
 }
 .btn-social-circle--feedly {
+
 color: #60d245;
 background-image: linear-gradient(#b9ffca 0%, #80e067 100%);
 }
@@ -80,3 +81,4 @@ display: none;
 z-index: 9999;
 width: 280px;
 }
+
