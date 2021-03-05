@@ -1,5 +1,4 @@
 
-
 <?php
   include 'conn.php';
   include 'insert.php';
@@ -13,57 +12,75 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js'></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     </head>
     <body>
-      <h1>タンパクっと</h1>
 
+      <h1>たんぱくっと</h1>
+ <h2>本日は<?php echo (int)$goukei; ?>グラム摂取しています</h2>
       <br></br>
-      <img src="tanpaku.png" alt="海の写真" title="空と海"width="965" height="500" >
-<!-- ドーナツチャート読み込み -->
+     
 
-<canvas id="myPieChart"></canvas>
-<div id = pie-chart></div>
+<div class="container">
+  <div class="row">
+    <div class="col-6"><!--左半分-->
+    
 
+<table border="1" style="border-collapse: collapse;">
+  <thead style="display: block;">
+    <tr>
+      <th style="width:180px;border:1px solid;">食品</th>
+      <th style="width: 180px;border:1px solid;">タンパク質</th>
+      <th style="width:180px;border:1px solid;">選択数</th>
+    </tr>
+  </thead>
 
-
-
-<div class="aaaa">
-
-
-<div class="hidden_box">
-<label for="label1">選択してください</label>
-<input type="checkbox" id="label1"/>
-<div class="hidden_show">
-  
-<!--非表示ここから-->
-
-<table  class="momoyama-table">
-  <thead>
-<tr><th>食品</th><th>タンパク質</th><th>選択数</th></tr>
-</thead>
-<?php
-
+  <tbody style="display: block;overflow-y:scroll;height:400px;">
+    <?php
 //配列$products
 foreach($products as $p){
 $id = $p['id'];
 $name = $p['food_name'];
 $protein = $p['protein'];
 $order = $p['order_quantity'];
-//表を生成して選択に合わせてidを送信
-echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グラム</td><td>{$order}個</td></tr>";
+echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></td><td style='width:180px;'>{$protein}グラム</td><td style='width:180px;'>{$order}個</td></tr>";
 }
 ?>
+   
+  </tbody>
 </table>
-<!--ここまで-->
-</div>
-</div>
+ </div><!--左半分のcolの閉じたぐ-->
+    <div class="col-6"><!--右半分のcolの閉じたぐ-->
+    
 
-     </div>   
+ <form action="index.php" method="post">
+<div class="sousa">
+<button class="btn-social-circle btn-social-circle--hatebu">
+  <img src="touroku.png" alt="海の写真" name="add" title="登録" width="40" height="30" >
+</button>
+<button class="btn-social-circle btn-social-circle--pocket">
+   <img src="gomi.png" alt="海の写真" title="削除" 　width="50" height="30">
+</button>
+<button class="btn-social-circle btn-social-circle--feedly">
+  <img src="reload.png" alt="海の写真" name="update"　title="更新" 　width="40" height="30">
+</button>
+     </form> 
+     </div>
+ 
+<!-- ドーナツチャート読み込み -->
+<canvas id="myPieChart"></canvas>
+<div id = pie-chart></div>
 
-  </div> 
+        </div><!--右半分のcolの閉じたぐ-->
+</div><!--rowの閉じたぐ-->
 
-      <?php
+<!--本日のノルマは完了しています-->
+ <?php
 
       foreach($total_products as $p){
 
@@ -107,7 +124,7 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       }
       pie();
 
-      var blue = 'rgb(54, 162, 235)';
+      var blue = '#FFFF00';
       var gray = 'rgb(99, 99, 99)';
       var ctx = document.getElementById("myPieChart");
       var myPieChart = new Chart(ctx, {
@@ -127,13 +144,14 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
       </script>
 
      <h2>直近一週間のグラフ</h2> 
-     <h2>本日は<?php echo (int)$goukei; ?>グラム摂取しました</h2>
+   
+ 
          <!--棒グラフの表示-->  
  <div class="bar">
-
-      <div class="chart-container" style="position: relative; width: 950px; height: 700px;">
+   
+      <div class="chart-container" style="position: relative;  left: 5px;width: 950px; height: 700px;">
           <canvas id="myLineChart">ここにチャート表示</canvas>
-      </div>     
+     </div>     
      <script>
      //.getContext('2d');はcanvasでグラフとか描画するために使う 
      var cty = document.getElementById("myLineChart").getContext('2d');
@@ -168,7 +186,9 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
           ],
         },
         options: {
-
+      chartArea: {
+        backgroundColor: 'white'
+       },
       scales: {
         xAxes: [{
           id : 'x軸',
@@ -217,13 +237,22 @@ echo "<tr><td><a href='product.php?id={$id}'>{$name}</a></td><td>{$protein}グ�
     }
         }
   }); 
-  
+
+$(function() {
+	setTimeout(function(){
+		$('.start p').fadeIn(1600);
+	},500); //0.5秒後にロゴをフェードイン!
+	setTimeout(function(){
+		$('.start').fadeOut(500);
+	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+});
 
 /*
   // グラフオプションの title 指定を削除しただけです
 (function() {
   var blue = 'rgb(54, 162, 235)';
   var gray = 'rgb(99, 99, 99)';
+
 
   //円グラフの中身の割合
   var data = {
@@ -312,29 +341,97 @@ var chartJsPluginCenterLabel = {
 // 上記プラグインの有効化
 Chart.plugins.register(chartJsPluginCenterLabel);*/
 
+// 文字列に変換
+  //var dataString = dataset.data[index].toString();
+
+  // 文字の配置（ "0" のときは配置しない）
+  // if( dataString!=="0" ) {
+  //   ctx.textAlign = 'center';
+  //   ctx.textBaseline = 'middle';
+  //   var padding = 5;
+  //   var position = element.tooltipPosition();
+  //   ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
+  // }
+
+
+  // グラフオプション
+  var options = {
+    // グラフの太さ（中央部分を何％切り取るか）
+    cutoutPercentage: 65,
+    // 凡例を表示しない
+    legend: { display: false },
+    // 自動サイズ変更をしない
+    responsive: false,
+    title: {
+      display: true,
+      fontSize: 16,
+      text: 'baka',
+    },
+    // マウスオーバー時に情報を表示しない
+    tooltips: { enabled: true },
+  };
+
+
+
+
+  // グラフ描画
+  var ctx = document.getElementById('chart-area').getContext('2d');
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options
+  });
+})();
+
+var chartJsPluginCenterLabel = {
+  labelShown: false,
+
+  afterRender: function (chart) {
+    // afterRender は何度も実行されるので、２回目以降は処理しない
+    if (this.labelShown) {
+      return;
+    }
+    this.labelShown = true;
+    // ラベルの HTML
+    //数値挿入
+
+    /*if(x <= 65){
+        console.log(`本日は残り${65 - x}グラムです`);
+    }else{
+        console.log("本日のノルマは達成されています")
+    }
+
+
+    //円グラフの中の条件分岐
+    if(total_protein <= 65){
+      var value = `本日は残り${65 - total_protein}グラムです`;
+    }else{
+      var value = "本日のノルマは完了しています"
+    }
+
+    var labelBox = document.createElement('div');
+    labelBox.classList.add('label-box');
+    labelBox.innerHTML = '<div class="label">'
+      + value
+      + '<span class="per">%</span>'
+      + '</div>';
+};
+
+// 上記プラグインの有効化
+Chart.plugins.register(chartJsPluginCenterLabel);*/
+
       </script>
-
- <form action="index.php" method="post">
-<div class="sousa">
-<button class="btn-social-circle btn-social-circle--hatebu">
-  <img src="touroku.png" alt="海の写真" title="登録" 　width="50" height="30">
-</button>
-<button class="btn-social-circle btn-social-circle--pocket">
-   <img src="gomi.png" alt="海の写真" title="削除" 　width="50" height="30">
-</button>
-<button class="btn-social-circle btn-social-circle--feedly">
-  <img src="reload.png" alt="海の写真" name="update"　title="更新" 　width="40" height="30">
-</button>
-     </form> 
-     </div>
-    </div>
-   
-    <form action="index.php" method="post">
-
+  <!--  <form action="index.php" method="post">
         <button type="submit" name="add">登録</button>
         <button type="submit" name="update">更新</button>
         <button type="submit" name="remove">削除</button>
       </form>    
       -->    
-	</body>
+    <!--棒グラフのスクリプト-->
+    
+  </div><!--containarの閉じたぐ-->
+     <div class="start">
+    <p><img src="tanpaku.png" alt="">
+   
+ </body>
 </html>

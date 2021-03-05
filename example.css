@@ -1,163 +1,84 @@
 h1{
-    line-height: 450%;
-    font-size: 200%;
-    color: white;
-    background-color: navy;
-    font-weight: 900;
-    text-align: center;
-    margin: auto;
-    padding: auto;
+  line-height: 450%;
+  font-size: 200%;
+  color: white;
+  background-color: #222222;
+  font-weight: 900;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
+h2 { 
+  text-align: center ;
+      font-size: 500px;
   }
-  h2 { 
-    text-align: center 
-    }
 body{
-   background-color: white;
-}
-  table {
-     
-      width: 290px;
-  }
-  table th {
-      white-space: nowrap;
-      width: 100px;
-  }
-  select{
-  font-size: 160%;
-      width: 290px;
-      height: 70px;
-  }
-  .aaaa{
-      display: flex;
-      flex-direction: row;
-      height: 600px;
-    
-  }
-  
-  /***　江戸カラー　***/
-
-.momoyama-table{
-	table-layout: fixed;
-}
-
-/* ヘッダー */
-.momoyama-table thead th {
-	background:#3F4551;
-	font-weight: bold;
-	color:#fff;
-}
-
-
-/* ボディ項目・フッター項目 */
-.momoyama-table tbody th {
-	background:#E5E2E4;
-	font-weight: bold;
-}
-
-/* ボディデータ・フッターデータ */
-.momoyama-table tbody td {
-	text-align:center;
-}
-
-/* 偶数行　１行ごとの色変えが不要なら削除 */
-.momoyama-table tr:nth-child(2n) td {
-    background: #FBFBF6;
-}
-/* 偶数行の項目 １行ごとの色変えが不要なら削除 */
-.momoyama-table tr:nth-child(2n) th {
-    background: #E6E6E6;
-}
-  /*全体*/
-.hidden_box {
-    margin: 2em 0;/*前後の余白*/
-    padding: 0;
-      width: 290px;
-      height: 200px;
-}
-
-/*ボタン装飾*/
-.hidden_box label {
-      display: inline-block;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  background: #668ad8;/*ボタン色*/
-  color: #FFF;
-  border-bottom: solid 4px #627295;
-  border-radius: 3px;
+ background-color: #F15922;
 
 }
-
-/*ボタンホバー時*/
-.hidden_box label:active {
-   /*ボタンを押したとき*/
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);/*下に動く*/
-  border-bottom: none;/*線を消す*/
-}
-
-/*チェックは見えなくする*/
-.hidden_box input {
-    display: none;
-}
-
-/*中身を非表示にしておく*/
-.hidden_box .hidden_show {
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: 0.8s;
-}
-
-/*クリックで中身表示*/
-.hidden_box input:checked ~ .hidden_show {
-    padding: 10px 0;
-    height: auto;
-    opacity: 1;
-}
-
-
 
 
 .btn-social-circle {
-  display: inline-block;
-  text-decoration: none;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 23px;
-  border-radius: 50%;
-  text-align: center;
-  overflow: hidden;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
-  transition: .3s;
-        
+display: inline-block;
+text-decoration: none;
+width: 50px;
+height: 50px;
+line-height: 50px;
+font-size: 23px;
+border-radius: 50%;
+text-align: center;
+overflow: hidden;
+font-weight: bold;
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+transition: 0.3s;     
 }
-.btn-social-circle i {
-  line-height: 50px;
-}
-.btn-social-circle:hover　{
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.28);
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-}
+
 social-circle--hatebu {
-  color: #49a8fb;
-  background-image: linear-gradient(#d2efff 0%, #76befb 100%);
+color: #49a8fb;
+background-image: linear-gradient(#d2efff 0%, #76befb 100%);
 }
 .btn-social-circle--pocket {
-  color: #ff6d82;
-  background-image: linear-gradient(#ffcfd7 0%, #ff7285 100%);
+color: #ff6d82;
+background-image: linear-gradient(#ffcfd7 0%, #ff7285 100%);
 }
 .btn-social-circle--feedly {
-  color: #60d245;
-  background-image: linear-gradient(#b9ffca 0%, #80e067 100%);
+
+color: #60d245;
+background-image: linear-gradient(#b9ffca 0%, #80e067 100%);
 }
 
-.sousa{
-  text-align:  center;        
 
+
+form{/*ボタンの位置調整*/
+ position: relative; /* 今の位置を基準 */
+    right: 40px;
+    padding: 45px;
+}
+/*
+.image{
+height:100px;
+margin-top: 0;margin-left: 0;margin-right: 0;margin-bottom: 0;
+width: 1450px; 
+vertical-align: bottom;
+line-height: 1.0em;
+}*/
+.start {
+background: #FFF;
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 9000;
+}
+.start p {
+position: fixed;
+
+top: 50%;
+transform: translate(-50%, -50%);
+display: none;
+z-index: 9999;
+width: 280px;
 }
 
