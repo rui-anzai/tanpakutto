@@ -1,4 +1,3 @@
-
 <?php
   include 'conn.php';
   include 'insert.php';
@@ -21,8 +20,11 @@
     </head>
     <body>
 
-      <h1>たんぱくっと</h1>
- <h2>本日は<?php echo (int)$goukei; ?>グラム摂取しています</h2>
+    <header class="fixed-top" style="background-color:black;">
+        <h1 class="text-center">たんぱくっと</h1>
+    </header>
+    
+ <h2 style="margin-top:50px;">本日は<?php echo (int)$goukei; ?>グラム摂取しています</h2>
       <br></br>
      
 
@@ -57,24 +59,18 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
  </div><!--左半分のcolの閉じたぐ-->
     <div class="col-6"><!--右半分のcolの閉じたぐ-->
     
-
- <form action="index.php" method="post">
 <div class="sousa">
-<button class="btn-social-circle btn-social-circle--hatebu">
-  <img src="touroku.png" alt="海の写真" name="add" title="登録" width="40" height="30" >
-</button>
-<button class="btn-social-circle btn-social-circle--pocket">
-   <img src="gomi.png" alt="海の写真" title="削除" 　width="50" height="30">
-</button>
-<button class="btn-social-circle btn-social-circle--feedly">
-  <img src="reload.png" alt="海の写真" name="update"　title="更新" 　width="40" height="30">
-</button>
+ <form action="index.php" method="post">
+
+  <input type="image" src="touroku.png" class="btn-social-circle btn-social-circle--hatebu">
+  <input type="image" src="gomi.png" class="btn-social-circle btn-social-circle--pocket">
+  <input type="image" src="reload.png" class="btn-social-circle btn-social-circle--feedly">
      </form> 
      </div>
  
 <!-- ドーナツチャート読み込み -->
 <canvas id="myPieChart"></canvas>
-<div id = pie-chart></div>
+<div id = "pie-chart"></div>
 
         </div><!--右半分のcolの閉じたぐ-->
 </div><!--rowの閉じたぐ-->
@@ -142,16 +138,20 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
         }
       });
       </script>
-
+      
+<div class="row">
+    <div class="col-12">
      <h2>直近一週間のグラフ</h2> 
    
  
          <!--棒グラフの表示-->  
  <div class="bar">
    
-      <div class="chart-container" style="position: relative;  left: 5px;width: 950px; height: 700px;">
-          <canvas id="myLineChart">ここにチャート表示</canvas>
-     </div>     
+      <div class="chart-container">
+          <canvas class="text-center" id="myLineChart" style="margin-bottom:50px;">ここにチャート表示</canvas>
+     </div> 
+</div>
+</div>
      <script>
      //.getContext('2d');はcanvasでグラフとか描画するために使う 
      var cty = document.getElementById("myLineChart").getContext('2d');
@@ -351,6 +351,10 @@ Chart.plugins.register(chartJsPluginCenterLabel);*/
      <div class="start">
     <p><img src="tanpaku.png" alt="">
     </div>
+    <footer class="fixed-bottom" style="background-color:black;">
+        <p class="text-center" style="color:white;">フッター</p>
+    </footer>
    
  </body>
-</html>
+</html> 
+ 
