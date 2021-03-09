@@ -11,6 +11,7 @@ h1{
 h2 { 
   text-align: center ;
       font-size: 400% !important; 
+      font-family:"MSゴシック",sans-serif !important;
   }
 body{
  background-color: #F15922;
@@ -70,19 +71,24 @@ height: 100%;
 width: 100%;
 z-index: 9000;
 }
-.start p {
+/*.start p {
 position: fixed;
 width: 70%;
-/*PC版を発表の場合は width: 40%;*/
+PC版を発表の場合は width: 40%;
 height: auto;
 top: 50%;
 transform: translate(-50%, -50%);
 display: none;
 z-index: 9999;
-/*width: 280px;*/
-}
-.foot{
-background-color: #222222;
-text-align: center;
-color: white
+width: 280px;
+}*/
+.start p {
+position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+display: none;
+z-index: 9999;
+width: 100px;
+ text-align: center;
 }

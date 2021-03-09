@@ -1,3 +1,4 @@
+ 
 <?php
   include 'conn.php';
   include 'insert.php';
@@ -141,6 +142,7 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
       
 <div class="row">
     <div class="col-12">
+       <br></br>
      <h2>直近一週間のグラフ</h2> 
    
  
@@ -349,12 +351,13 @@ Chart.plugins.register(chartJsPluginCenterLabel);*/
     
   </div><!--containarの閉じたぐ-->
      <div class="start">
-    <p><img src="tanpaku.png" alt="">
+    <p><img src="kinniku.png" alt="">
     </div>
     <footer class="fixed-bottom" style="background-color:black;">
-        <p class="text-center" style="color:white;">フッター</p>
+        <p class="text-center" style="color:white; ">&copy;2021 大腿四頭筋</p>
     </footer>
    
  </body>
 </html> 
+ 
  
