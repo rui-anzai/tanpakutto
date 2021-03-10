@@ -8,11 +8,16 @@ h1{
   margin: auto;
   padding: auto;
 }
-h2 { 
+.kinniku{
+    display: block; 
+  margin: 0 auto;
+
+}
+/*  h2 { 
   text-align: center ;
       font-size: 400% !important; 
       font-family:"MSゴシック",sans-serif !important;
-  }
+  }*/
 body{
  background-color: #F15922;
 
@@ -63,7 +68,7 @@ vertical-align: bottom;
 line-height: 1.0em;
 }*/
 .start {
-background: #FFF;
+background: white;
 position: fixed;
 top: 0;
 left: 0;
@@ -89,6 +94,6 @@ top: 50%;
 transform: translate(-50%, -50%);
 display: none;
 z-index: 9999;
-width: 100px;
+
  text-align: center;
 }
