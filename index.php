@@ -63,9 +63,9 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
 <div class="sousa">
  <form action="index.php" method="post">
 
-  <input type="submit" src="touroku.png" class="btn-social-circle btn-social-circle--hatebu">
-  <input type="submit" src="gomi.png" class="btn-social-circle btn-social-circle--pocket">
-  <input type="submit" src="reload.png" class="btn-social-circle btn-social-circle--feedly">
+  <input type="image" name="add" src="touroku.png" class="btn-social-circle btn-social-circle--hatebu">
+  <input type="image" name="update" src="gomi.png" class="btn-social-circle btn-social-circle--pocket">
+  <input type="image" name=reload src="reload.png" class="btn-social-circle btn-social-circle--feedly">
      </form> 
      </div>
  
@@ -88,27 +88,8 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
       //更新ボタン
       if(isset($_POST['add'])) {
           echo "";
-      } else if(isset($_POST['btn-social-circle btn-social-circle--feedly'])) {
-          $produc = array();
-          try
-          {
-          // mysql接続
-          $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
-          $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      } else if(isset($_POST['reload'])) {
 
-          // 食品一覧を取得
-          $stmt6 = $db->query("SELECT * FROM `chart` WHERE date_time = (SELECT MAX(date_time) FROM chart)");
-          $total_products = $stmt6->fetchAll(PDO::FETCH_ASSOC);
-                
-            //接続を切る
-            //$db = null;
-            }
-            catch(PDOException $e)
-            {
-              echo $e->getMessage();
-              exit;
-            
-          }
           	try
           	{
           	// db接続
