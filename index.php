@@ -63,9 +63,9 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
 <div class="sousa">
  <form action="index.php" method="post">
 
-  <input type="image" src="touroku.png" class="btn-social-circle btn-social-circle--hatebu">
-  <input type="image" src="gomi.png" class="btn-social-circle btn-social-circle--pocket">
-  <input type="image" src="reload.png" class="btn-social-circle btn-social-circle--feedly">
+  <input type="submit" src="touroku.png" class="btn-social-circle btn-social-circle--hatebu">
+  <input type="submit" src="gomi.png" class="btn-social-circle btn-social-circle--pocket">
+  <input type="submit" src="reload.png" class="btn-social-circle btn-social-circle--feedly">
      </form> 
      </div>
  
