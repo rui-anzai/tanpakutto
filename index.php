@@ -21,9 +21,12 @@
     <body>
 
     <header class="fixed-top" style="background-color:black;">
-        <h1 class="text-center">たんぱくっと</h1>
+      <!--  <h1 class="text-center">たんぱくっと</h1>-->
+       <p><img src="kinnikukakudai2.png" alt=""width="75" height="85"style=" text-align: center;"class="kinniku"></p>
     </header>
-    
+      <br></br> 
+     <br></br>
+      <br></br>
  <h2 style="margin-top:50px;">本日は<?php echo (int)$goukei; ?>グラム摂取しています</h2>
       <br></br>
      
@@ -141,7 +144,8 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
       
 <div class="row">
     <div class="col-12">
-     <h2>直近一週間のグラフ</h2> 
+       <br></br>
+     <h2 >直近一週間のグラフ</h2> 
    
  
          <!--棒グラフの表示-->  
@@ -349,10 +353,10 @@ Chart.plugins.register(chartJsPluginCenterLabel);*/
     
   </div><!--containarの閉じたぐ-->
      <div class="start">
-    <p><img src="tanpaku.png" alt="">
+    <p><img src="kinniku3.png" alt=""width="400" height="400"></p>
     </div>
     <footer class="fixed-bottom" style="background-color:black;">
-        <p class="text-center" style="color:white;">フッター</p>
+        <p class="text-center" style="color:white; ">&copy;2021 大腿四頭筋</p>
     </footer>
    
  </body>

@@ -8,10 +8,16 @@ h1{
   margin: auto;
   padding: auto;
 }
-h2 { 
+.kinniku{
+    display: block; 
+  margin: 0 auto;
+
+}
+/*  h2 { 
   text-align: center ;
       font-size: 400% !important; 
-  }
+      font-family:"MSゴシック",sans-serif !important;
+  }*/
 body{
  background-color: #F15922;
 
@@ -62,7 +68,7 @@ vertical-align: bottom;
 line-height: 1.0em;
 }*/
 .start {
-background: #FFF;
+background: white;
 position: fixed;
 top: 0;
 left: 0;
@@ -70,19 +76,24 @@ height: 100%;
 width: 100%;
 z-index: 9000;
 }
-.start p {
+/*.start p {
 position: fixed;
 width: 70%;
-/*PC版を発表の場合は width: 40%;*/
+PC版を発表の場合は width: 40%;
 height: auto;
 top: 50%;
 transform: translate(-50%, -50%);
 display: none;
 z-index: 9999;
-/*width: 280px;*/
-}
-.foot{
-background-color: #222222;
-text-align: center;
-color: white
+width: 280px;
+}*/
+.start p {
+position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+display: none;
+z-index: 9999;
+
+ text-align: center;
 }
