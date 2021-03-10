@@ -125,7 +125,7 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
       var blue = '#FFFF00';
       var gray = 'rgb(99, 99, 99)';
       var ctx = document.getElementById("myPieChart");
-      element.ctx.height = '400px';
+      ctx.style.height = '400px';
       var myPieChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
