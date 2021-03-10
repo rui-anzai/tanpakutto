@@ -71,8 +71,7 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
  
 <!-- ドーナツチャート読み込み -->
 <canvas id="myPieChart"></canvas>
-<div id = "pie-chart"></div>
-
+<div id = "pie-chart" style="position: relative; height:100; width:150"></div>
         </div><!--右半分のcolの閉じたぐ-->
 </div><!--rowの閉じたぐ-->
 
