@@ -70,7 +70,7 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
      </div>
  
 <!-- ドーナツチャート読み込み -->
-<div style="position:absolute; top:60px; left:10px; width:500px; height:500px;">
+<div width="500px" height="500">
   <canvas id="myPieChart"></canvas>
   <div id = "pie-chart" ></div>
 </div>
