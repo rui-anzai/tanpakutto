@@ -89,16 +89,38 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
       if(isset($_POST['add'])) {
           echo "";
       } else if(isset($_POST['update'])) {
+          $produc = array();
+          try
+          {
+          // mysql接続
+          $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
+          $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+          // 食品一覧を取得
+          $stmt6 = $db->query("SELECT * FROM `chart` WHERE date_time = (SELECT MAX(date_time) FROM chart)");
+          $total_products = $stmt6->fetchAll(PDO::FETCH_ASSOC);
+                
+            //接続を切る
+            //$db = null;
+            }
+            catch(PDOException $e)
+            {
+              echo $e->getMessage();
+              exit;
+            
+          }
           	try
           	{
           	// db接続
           	$db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
           	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
             //
-            $db->exec("UPDATE `food_products` SET `order_quantity`=0 WHERE 1"); //注文数を0にリセット
+            $db->exec("UPDATE `chart` SET `total`= 0 WHERE 1"); //注文数を0にリセット
+            // $db->exec("UPDATE `food_products` SET `order_quantity`=0 WHERE 1");
             //$db->exec("SELECT * FROM `chart` WHERE date_time = (SELECT MAX(date_time) FROM chart)");
             //$db->exec("UPDATE `chart` SET `total`= 0 WHERE 1");
           	}
+
           	catch(PDOException $e)
           	{
           	    $error = $e->getMessage();
@@ -118,14 +140,12 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
         }else{
           var value = "本日のノルマは完了しています"
         }
-        document.getElementById('pie-chart').innerHTML = value ;
       }
       pie();
 
       var blue = '#FFFF00';
       var gray = 'rgb(99, 99, 99)';
       var ctx = document.getElementById("myPieChart");
-      document.getElementById('pie-chart').style.width = '300px';
       var myPieChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
