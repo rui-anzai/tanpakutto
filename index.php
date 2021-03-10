@@ -33,6 +33,7 @@
     <div class="col-6"><!--左半分-->
     
 
+
 <table border="1" style="border-collapse: collapse;">
   <thead style="display: block;">
     <tr>
