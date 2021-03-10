@@ -86,3 +86,8 @@ background-color: #222222;
 text-align: center;
 color: white
 }
+
+element.style {
+  display: block;
+  height: 380px;
+}
