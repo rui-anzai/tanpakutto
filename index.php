@@ -88,7 +88,7 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
       //更新ボタン
       if(isset($_POST['add'])) {
           echo "";
-      } else if(isset($_POST['update'])) {
+      } else if(isset($_POST['btn-social-circle btn-social-circle--feedly'])) {
           $produc = array();
           try
           {
