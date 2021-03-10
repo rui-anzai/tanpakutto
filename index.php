@@ -65,7 +65,7 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
 
   <input type="image" name="add" src="touroku.png" class="btn-social-circle btn-social-circle--hatebu">
   <input type="image" name="update" src="gomi.png" class="btn-social-circle btn-social-circle--pocket">
-  <input type="image" name=reload src="reload.png" class="btn-social-circle btn-social-circle--feedly">
+  <input type="submit" name=reload src="reload.png" class="btn-social-circle btn-social-circle--feedly">
      </form> 
      </div>
  
