@@ -72,12 +72,10 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
      </div>
  
 <!-- ドーナツチャート読み込み -->
-
 <canvas id="myPieChart" style="display: block;position: relative; left:20px;
 bottom:500px; " width="202" height="636" class="chartjs-render-monitor" ></canvas>
 <div id = "pie-chart"style="position: relative; 
  bottom: 1025px; left:80px;";></div>
-
 
         </div><!--右半分のcolの閉じたぐ-->
 </div><!--rowの閉じたぐ-->
@@ -94,20 +92,20 @@ bottom:500px; " width="202" height="636" class="chartjs-render-monitor" ></canva
       if(isset($_POST['add'])) {
           echo "";
       } else if(isset($_POST['update'])) {
-          	try
-          	{
-          	// db接続
-          	$db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
-          	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
+           try
+           {
+           // db接続
+           $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
+           $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
             //
-            $db->exec("UPDATE `food_products` SET `order_quantity`=0 WHERE 1"); //注文数を0にリセット
-            //$db->exec("SELECT * FROM `chart` WHERE date_time = (SELECT MAX(date_time) FROM chart)");
-            //$db->exec("UPDATE `chart` SET `total`= 0 WHERE 1");
-          	}
-          	catch(PDOException $e)
-          	{
-          	    $error = $e->getMessage();
-          	    exit;
+            $db->exec("UPDATE food_products SET `order_quantity`=0 WHERE 1"); //注文数を0にリセット
+            //$db->exec("SELECT * FROM chart WHERE date_time = (SELECT MAX(date_time) FROM chart)");
+            //$db->exec("UPDATE chart SET `total`= 0 WHERE 1");
+           }
+           catch(PDOException $e)
+           {
+               $error = $e->getMessage();
+               exit;
             }
             
       } else {
@@ -127,9 +125,7 @@ bottom:500px; " width="202" height="636" class="chartjs-render-monitor" ></canva
       }
       pie();
 
-
       var blue = 'rgb(240, 150, 55)';
-
       var gray = 'rgb(99, 99, 99)';
       var ctx = document.getElementById("myPieChart");
       var myPieChart = new Chart(ctx, {
@@ -248,20 +244,18 @@ bottom:500px; " width="202" height="636" class="chartjs-render-monitor" ></canva
         }
   }); 
 $(function() {
-	setTimeout(function(){
-		$('.start p').fadeIn(1600);
-	},500); //0.5秒後にロゴをフェードイン!
-	setTimeout(function(){
-		$('.start').fadeOut(500);
-	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+ setTimeout(function(){
+  $('.start p').fadeIn(1600);
+ },500); //0.5秒後にロゴをフェードイン!
+ setTimeout(function(){
+  $('.start').fadeOut(500);
+ },2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
 });
 /*
   // グラフオプションの title 指定を削除しただけです
 (function() {
   var blue = 'rgb(54, 162, 235)';
   var gray = 'rgb(99, 99, 99)';
-
-
   //円グラフの中身の割合
   var data = {
     datasets: [{
@@ -269,10 +263,8 @@ $(function() {
       backgroundColor: [blue, gray],
     }],
   };
-
 // 文字列に変換
   //var dataString = dataset.data[index].toString();
-
   // 文字の配置（ "0" のときは配置しない）
   // if( dataString!=="0" ) {
   //   ctx.textAlign = 'center';
@@ -281,7 +273,6 @@ $(function() {
   //   var position = element.tooltipPosition();
   //   ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
   // }
-
   // グラフオプション
   var options = {
     // グラフの太さ（中央部分を何％切り取るか）
@@ -298,7 +289,6 @@ $(function() {
     // マウスオーバー時に情報を表示しない
     tooltips: { enabled: true },
   };
-
   // グラフ描画
   var ctx = document.getElementById('chart-area').getContext('2d');
   new Chart(ctx, {
@@ -307,10 +297,8 @@ $(function() {
     options: options
   });
 })();
-
 var chartJsPluginCenterLabel = {
   labelShown: false,
-
   afterRender: function (chart) {
     // afterRender は何度も実行されるので、２回目以降は処理しない
     if (this.labelShown) {
@@ -319,20 +307,17 @@ var chartJsPluginCenterLabel = {
     this.labelShown = true;
     // ラベルの HTML
     //数値挿入
-
     /*if(x <= 65){
         console.log(`本日は残り${65 - x}グラムです`);
     }else{
         console.log("本日のノルマは達成されています")
     }
-
     //円グラフの中の条件分岐
     if(total_protein <= 65){
       var value = `本日は残り${65 - total_protein}グラムです`;
     }else{
       var value = "本日のノルマは完了しています"
     }
-
     var labelBox = document.createElement('div');
     labelBox.classList.add('label-box');
     labelBox.innerHTML = '<div class="label">'
@@ -340,7 +325,6 @@ var chartJsPluginCenterLabel = {
       + '<span class="per">%</span>'
       + '</div>';
 };
-
 // 上記プラグインの有効化
 Chart.plugins.register(chartJsPluginCenterLabel);*/
 
@@ -351,7 +335,7 @@ Chart.plugins.register(chartJsPluginCenterLabel);*/
         <button type="submit" name="remove">削除</button>
       </form>    
       -->    
-    <!--棒グラフのスクリプト-->
+    <!--棒グラフのスクリ
     
   </div><!--containarの閉じたぐ-->
      <div class="start">
@@ -365,6 +349,5 @@ Chart.plugins.register(chartJsPluginCenterLabel);*/
  </body>
 
 </html> 
-
 
 
