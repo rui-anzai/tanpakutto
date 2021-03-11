@@ -72,8 +72,12 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
      </div>
  
 <!-- ドーナツチャート読み込み -->
-<canvas id="myPieChart"></canvas>
-<div id = "pie-chart"></div>
+
+<canvas id="myPieChart" style="display: block;position: relative; left:20px;
+bottom:500px; " width="202" height="636" class="chartjs-render-monitor" ></canvas>
+<div id = "pie-chart"style="position: relative; 
+ bottom: 1025px; left:80px;";></div>
+
 
         </div><!--右半分のcolの閉じたぐ-->
 </div><!--rowの閉じたぐ-->
@@ -123,7 +127,9 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
       }
       pie();
 
-      var blue = '#FFFF00';
+
+      var blue = 'rgb(240, 150, 55)';
+
       var gray = 'rgb(99, 99, 99)';
       var ctx = document.getElementById("myPieChart");
       var myPieChart = new Chart(ctx, {
@@ -215,7 +221,7 @@ echo "<tr><td style='width:180px;'><a href='product.php?id={$id}'>{$name}</a></t
                 scaleID: 'y軸', // 基準とする軸のid名
                 value: 65.0, // 引きたい線の数値（始点）
                 endValue: 65.0, // 引きたい線の数値（終点）
-                borderColor: 'red', // 線の色
+                borderColor: 'rgb(240, 150, 55)', // 線の色
                 borderWidth: 3, // 線の幅（太さ）
                 borderDash: [2, 2],
                 borderDashOffset: 1,
@@ -255,6 +261,7 @@ $(function() {
   var blue = 'rgb(54, 162, 235)';
   var gray = 'rgb(99, 99, 99)';
 
+
   //円グラフの中身の割合
   var data = {
     datasets: [{
@@ -275,7 +282,6 @@ $(function() {
   //   ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
   // }
 
-
   // グラフオプション
   var options = {
     // グラフの太さ（中央部分を何％切り取るか）
@@ -292,9 +298,6 @@ $(function() {
     // マウスオーバー時に情報を表示しない
     tooltips: { enabled: true },
   };
-
-
-
 
   // グラフ描画
   var ctx = document.getElementById('chart-area').getContext('2d');
@@ -322,7 +325,6 @@ var chartJsPluginCenterLabel = {
     }else{
         console.log("本日のノルマは達成されています")
     }
-
 
     //円グラフの中の条件分岐
     if(total_protein <= 65){
@@ -360,5 +362,6 @@ Chart.plugins.register(chartJsPluginCenterLabel);*/
     </footer>
    
  </body>
+
 </html> 
- 
+

@@ -1,99 +1,101 @@
 h1{
-  line-height: 450%;
-  font-size: 200%;
-  color: white;
-  background-color: #222222;
-  font-weight: 900;
+    line-height: 450%;
+    font-size: 200%;
+    color: white;
+    background-color: #222222;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+  }
+  .kinniku{/*ヘッダー調整*/
+      display: block; 
+    margin: 0 auto;
+  }
+  .row{
+    height:500px;
+  }
+    h2 { 
+    text-align: center ;
+        font-size: 400% !important; 
+        font-family:"MSゴシック",sans-serif !important;
+    }
+  body{
+   background-color: #F15922;
+  
+  }
+  
+  .btn-social-circle {
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 23px;
+  border-radius: 50%;
   text-align: center;
-  margin: auto;
-  padding: auto;
-}
-.kinniku{
-    display: block; 
-  margin: 0 auto;
-
-}
-/*  h2 { 
-  text-align: center ;
-      font-size: 400% !important; 
-      font-family:"MSゴシック",sans-serif !important;
+  overflow: hidden;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+  transition: 0.3s;     
+  }
+  
+  social-circle--hatebu {
+  color: #49a8fb;
+  background-image: linear-gradient(#d2efff 0%, #76befb 100%);
+  }
+  .btn-social-circle--pocket {
+  color: #ff6d82;
+  background-image: linear-gradient(#ffcfd7 0%, #ff7285 100%);
+  }
+  .btn-social-circle--feedly {
+  color: #60d245;
+  background-image: linear-gradient(#b9ffca 0%, #80e067 100%);
+  }
+  
+  
+  
+  form{/*ボタンの位置調整*/
+   position: relative; /* 今の位置を基準 */
+      right: 40px;
+      padding: 45px;
+  }
+  /*
+  .image{
+  height:100px;
+  margin-top: 0;margin-left: 0;margin-right: 0;margin-bottom: 0;
+  width: 1450px; 
+  vertical-align: bottom;
+  line-height: 1.0em;
   }*/
-body{
- background-color: #F15922;
-
-}
-
-.btn-social-circle {
-display: inline-block;
-text-decoration: none;
-width: 50px;
-height: 50px;
-line-height: 50px;
-font-size: 23px;
-border-radius: 50%;
-text-align: center;
-overflow: hidden;
-font-weight: bold;
-text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
-transition: 0.3s;     
-}
-
-social-circle--hatebu {
-color: #49a8fb;
-background-image: linear-gradient(#d2efff 0%, #76befb 100%);
-}
-.btn-social-circle--pocket {
-color: #ff6d82;
-background-image: linear-gradient(#ffcfd7 0%, #ff7285 100%);
-}
-.btn-social-circle--feedly {
-color: #60d245;
-background-image: linear-gradient(#b9ffca 0%, #80e067 100%);
-}
-
-
-
-form{/*ボタンの位置調整*/
- position: relative; /* 今の位置を基準 */
-    right: 40px;
-    padding: 45px;
-}
-/*
-.image{
-height:100px;
-margin-top: 0;margin-left: 0;margin-right: 0;margin-bottom: 0;
-width: 1450px; 
-vertical-align: bottom;
-line-height: 1.0em;
-}*/
-.start {
-background: white;
-position: fixed;
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-z-index: 9000;
-}
-/*.start p {
-position: fixed;
-width: 70%;
-PC版を発表の場合は width: 40%;
-height: auto;
-top: 50%;
-transform: translate(-50%, -50%);
-display: none;
-z-index: 9999;
-width: 280px;
-}*/
-.start p {
-position: fixed;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-display: none;
-z-index: 9999;
-
- text-align: center;
-}
+  .start {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  }
+  /*.start p {
+  position: fixed;
+  width: 70%;
+  PC版を発表の場合は width: 40%;
+  height: auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  width: 280px;
+  }*/
+  .start p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  
+   text-align: center;
+  }
